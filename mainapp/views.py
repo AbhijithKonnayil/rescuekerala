@@ -14,6 +14,7 @@ class CreateRequest(CreateView):
     fields = [
         'district',
         'location',
+        'landmark_image',
         'requestee',
         'requestee_phone',
         'is_request_for_others',

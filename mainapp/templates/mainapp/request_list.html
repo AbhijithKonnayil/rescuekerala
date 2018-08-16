@@ -12,6 +12,7 @@
     <tr>
       <th>District</th>
       <th>Location</th>
+      <th>Location Image</th>
       <th>GPS Location</th>
       <th>Requestee</th>
       <th>Contact number</th>
@@ -22,6 +23,7 @@
         <tr>
           <td>{{ req.get_district_display }}</td>
           <td>{{ req.location }}</td>
+          <td><a href="{{req.landmark_image.url}}">view</a></td>
           <td>
             {% if req.latlng %}
               <a class="btn btn-sm btn-success" href="https://maps.google.com/?q={{ req.latlng }}" target="_blank">Open in maps</a>
