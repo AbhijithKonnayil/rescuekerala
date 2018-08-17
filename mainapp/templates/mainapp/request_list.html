@@ -59,18 +59,6 @@
  </form>
  <div id="requests-table" class="table-responsive">
   <table class="table">
-<<<<<<< HEAD
-    <tr>
-      <th>District</th>
-      <th>Location</th>
-      <th>Location Image</th>
-      <th>GPS Location</th>
-      <th>Requestee</th>
-      <th>Contact number</th>
-      <th>Summary of request</th>
-      <th>Date</th>
-    </tr>
-=======
     <thead>
       <tr>
         <th>District</th>
@@ -83,24 +71,10 @@
     </thead>
     <tbody>
 
->>>>>>> resolved
     {% for req in data %}
         <tr>
           <td>{{ req.get_district_display }}</td>
           <td>{{ req.location }}</td>
-<<<<<<< HEAD
-          <td><a href="{{req.landmark_image.url}}">view</a></td>
-          <td>
-            {% if req.latlng %}
-              <a class="btn btn-sm btn-success" href="https://maps.google.com/?q={{ req.latlng }}" target="_blank">Open in maps</a>
-              <br>
-              Accuracy: {{ req.latlng_accuracy }}
-            {% else %}
-              NA
-            {% endif %}
-          </td>
-=======
->>>>>>> resolved
           <td>{{ req.requestee }}</td>
           <td><a href="tel:{{ req.requestee_phone }}" >{{ req.requestee_phone }}</a></td>
           <td>{{ req.dateadded }}</td>
